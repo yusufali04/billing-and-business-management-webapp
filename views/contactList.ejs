@@ -1,0 +1,45 @@
+<section>
+    <div class="contact-list-main-wrapper">
+
+        <div class="navbar-bg">
+            
+        </div>
+
+        <div class="contact-list-wrapper">
+
+            <div class="contacts-list-heading-div">
+                <h1 class="contacts-list-heading">Select Contact</h1>
+                <hr>
+            </div>
+            
+            <div class="contact-list">
+
+                    <% contacts.forEach((contact)=>{  %>
+
+                        <form method="post" action="/contactSelected" id="<%= contact.gst %>">
+                            <input type="hidden" name="contact" value='<%= JSON.stringify(contact) %>' >
+                        </form>
+    
+                        <div class="contact" onclick="document.getElementById('<%= contact.gst %>').submit()">
+                            <p><%= contact.name %> </p>
+                            <p><%= contact.address %> </p>
+                            <p><%= contact.gst %> </p>
+                        </div>
+    
+                    <% }) %> 
+
+
+            </div>
+
+            <div class="skip-div">
+                <p><a href="/reverse" class="skip-btn">Skip <i class="fa-solid fa-arrow-right"></i></a></p>
+            </div>
+            
+
+            
+
+            
+        </div>
+
+    </div>
+</section>

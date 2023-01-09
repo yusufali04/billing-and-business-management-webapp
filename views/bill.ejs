@@ -1,0 +1,102 @@
+<section class="bill-section">
+
+    <div class="bill-main-wrapper">
+
+        <div class="invoice-details-div">
+            <span><b>Invoice No: <%= bill.invoiceNo %></b></span>
+            <span><b>Invoice Date: <%= bill.invoiceDate %></b></span>
+            <span><b>Invoice Time: <%= bill.invoiceTime %></b></span>
+
+        </div>
+
+        <div class="bill-wrapper">
+
+            <div class="bill-left-wrapper">
+
+                <div class="bill-left-div1">
+
+                    <p>Customer Name</p>                
+                    <p>Customer GSTIN</p>
+                    <p>Gross Weight</p>
+                    <p>LBR Rate</p>
+                    <P>SGST</P>
+                    <P>IGST</P>
+
+                </div>
+
+                <div class="bill-left-div2">
+                    <p>: <%= bill.customer_name %></p>
+                    <p>: <%= bill.customer_gstin %></p>
+                    <p>: <%= bill.grossWeight %></p>
+                    <p>: <%= bill.lbr %></p>
+                    <p>: <%= bill.sgst %></p>
+                    <p>: <%= bill.igst %></p>
+                </div>
+               
+                
+                
+    
+            </div>
+    
+            <div class="bill-right-wrapper">
+
+                <div class="bill-right-div1">
+
+                    <p>Customer Address</p>
+                    <p>Item</p>
+                    <p>Net Weight</p>
+                    <p>Amount</p>
+                    <p>CGST</p>
+                    <p>Total</p>
+
+                </div>
+
+                <div class="bill-right-div2">
+                    <p>: <%= bill.customer_address %> </p>
+                    <p>: <%= bill.itemDescription %></p>
+                    <p>: <%= bill.netWeight %></p>
+                    <p>: <%= bill.amount %></p>
+                    <p>: <%= bill.cgst %></p>
+                    <p>: <%= bill.total %></p>
+
+                </div>
+                
+                
+                
+                
+            </div>
+
+        </div>
+        
+
+        <div class="amountInWords-div">
+            <p>Amount In Words: </p>
+
+        </div>
+
+        <div class="bill-invoice-btn">
+            <button>Generate Invoice</button>
+            
+        </div>
+       
+
+    </div>
+
+</section>
+
+<!-- customer_name: 'Yusuf Ali',
+    customer_address: 'Near Check post, kurnool',
+    customer_gstin: 'GSTIN20361011051',
+    itemDescription: 'Ear ring and necklace ',
+    lbr: 5248,
+    cgst: 1.5,
+    igst: null,
+    sgst: 1.5,
+    grossWeight: 10.345,
+    netWeight: 9.948,
+    amount: 'Rs.52,207',
+    total: 'Rs.53,773.21',
+    amountInWords: 'FIFTY THREE THOUSAND SEVEN HUNDRED SEVENTY THREE RUPEES AND TWENTY ONE PAISE ONLY',
+    invoiceNo: 101,
+    invoiceDate: '7/10/2022',
+    invoiceTime: '5:26:34 pm', -->

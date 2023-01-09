@@ -1,0 +1,148 @@
+<section class="history-section">
+
+    <div class="history-super-wrapper">
+        <div class="navbar-bg">
+            
+        </div>
+
+        <div class="history-main-wrapper">
+
+            <div class="history-heading">
+                <h1>All Transactions</h1>
+            </div>
+          
+            <% for(var i=0;i<bills.length;i++){ %> 
+                
+    
+            <%    if(bills[i].invoiceNo!=100){ %>
+    
+            <div class="history-wrapper">
+               
+        
+                <div class="content-wrapper">
+        
+                    
+                    <div class="history-left-right-wrapper">
+        
+                        <div class="history-left">
+                            <div class="history-left-div1">
+    
+                                <p><b>Name</b></p>
+                                <p>Date</p>
+                                <p>Item</p>
+    
+                            </div>
+    
+                            <div class="history-left-div2">
+                                <p>: <%= bills[i].customer_name %></p>
+                                <p>: <%= bills[i].invoiceDate %></p>
+                                <p class="history-item-description">: <%= bills[i].itemDescription %></p>
+                               
+                            </div>
+        
+                            
+        
+                        </div>
+                
+                        <div class="history-right">
+    
+                            <div class="history-right-div1">
+                                
+                                <p class="remove-margin-top"><b>Invoice</b></p>
+                                
+                                <p>Total</p>
+                               
+    
+                            </div>
+                             
+                           
+                            <div class="history-right-div2">
+    
+                                <% if(bills[i].invoiceYear){ %>
+                                <p class="remove-margin-top">: <%= "MJ"+ bills[i].invoiceYear + bills[i].invoiceNo %></p>
+                                <% } %>
+                                <% if(!bills[i].invoiceYear){ %>  
+                                    <p class="remove-margin-top">: <%= bills[i].invoiceNo %></p>
+                                <% } %>     
+                                <p>: <%= bills[i].total %> </p>
+                                
+                                
+                            </div>
+        
+                           
+    
+                        </div>
+                     
+                    </div>
+        
+        
+                </div>
+                
+                <!-- <form id="<%= bills[i]._id %>" action="/invoice" method="post">
+                <input  type="hidden" name="bill" value="<%= bills[i] %>">   
+            </form>
+
+            <div class="arrow-div" onclick="document.getElementById('<%= bills[i]._id %>').submit()">
+                <p class="view">View</p>
+                <p class="arrow">></p>
+            </div>
+                -->
+                    
+               
+                
+    
+                <div class="delete-bill">
+                    <% if(bills[i].subTotal && bills[i].hsn){ %> 
+                    <button onclick="document.getElementById('<%= bills[i]._id %>3').submit()">Download Invoice</button>
+                    <% } %> 
+                    <form id="<%= bills[i]._id %>3" action="/invoice-copy" method="post">
+                        <input  type="hidden" name="invoiceNo" value="<%= bills[i]._id %>">   
+                    </form>
+                    <form id="<%= bills[i]._id %>1" action="/delete" method="post">
+                        <input  type="hidden" name="deleteBill" value="<%= bills[i]._id %>">   
+                    </form>
+                    
+                    <i class="fa-regular fa-trash-can fa" onclick="document.getElementById('<%= bills[i]._id %>2').style.display='block'"></i>
+                </div>
+                
+               
+            </div>
+    
+            <div id="<%= bills[i]._id %>2" class="modal">
+               
+                <form class="modal-content" action="/action_page.php">
+                    <div class="close-div">
+                        <span onclick="document.getElementById('<%=bills[i]._id%>2').style.display='none'" class="close" title="Close">×</span>
+                    </div>
+                    
+                  <div class="container">
+                    <h1>Delete Invoice</h1>
+                    <p class="delete-invoice">(<%= 'MJ'+bills[i].invoiceYear+bills[i].invoiceNo %>)</p>
+                    <p>Are you sure you want to delete this Invoice?</p>
+                  
+                    <div class="clearfix">
+                      <button type="button" onclick="document.getElementById('<%=bills[i]._id%>2').style.display='none'" class="cancelbtn delete-popup-btn">Cancel</button>
+                      <button type="button" class="deletebtn delete-popup-btn" onclick="document.getElementById('<%= bills[i]._id %>1').submit()">Delete</button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+    
+    
+            <% } %> 
+            <% } %> 
+    
+    
+    
+            
+    
+        </div>
+    </div>
+
+    
+
+        
+
+    
+
+</section>

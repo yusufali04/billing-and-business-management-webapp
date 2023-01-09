@@ -1,0 +1,1004 @@
+@media (max-width: 500px){
+
+    /*********************** Navbar *********************/
+
+    html{
+      font-size: 13px;
+    }
+
+    .navbar {
+        opacity: 0.95;
+        height: 5rem;
+    }
+
+    .navbar-bg{
+      height: 8rem;
+    }
+   
+      .navbar-container input[type="checkbox"],
+      .navbar-container .hamburger-lines {
+        display: block;
+        z-index: 201;
+      }
+    
+      .navbar-container {
+        display: block;
+        position: relative;
+        height: 5rem;
+        
+        
+      }
+    .navbar-container::after {
+        content: "";
+
+        clear: both;
+        display: table;
+    }
+    
+    .navbar-container input[type="checkbox"] {
+      position: absolute;
+      display: block;
+      height: 32px;
+      width: 30px;
+      top: 20px;
+      left: 20px;
+      z-index: 202;
+      opacity: 0;
+    }
+  
+    .navbar-container .hamburger-lines {
+      
+      display: block;
+      height: 22px;
+      width: 30px;
+      position: absolute;
+      top: 17px;
+      left: 20px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 201;
+    }
+    
+      .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 3px;
+        width: 100%;
+        border-radius: 10px;
+        background: rgb(232, 232, 232);
+      }
+    
+      .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% -15%;
+        transition: transform 0.4s ease-in-out;
+      }
+    
+      .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+    
+      .navbar-container .hamburger-lines .line3 {
+        transform-origin: -15% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+    
+      .navbar .menu-items {
+        z-index: 200;
+        position: relative;
+        top: 0;
+        padding-top: 100px;
+        background: rgb(255, 255, 255);
+        min-height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 1rem -40px;
+        padding-left: 0px;
+        padding-right: 0;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+        align-items: center;
+        overflow: scroll;
+      }
+      .navbar .menu-items li{
+        margin-top: 0.5rem;
+        text-align: center;
+      }
+    
+      .navbar .menu-items li{
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+      }
+      .navbar .menu-items a{
+        color: #444;
+      }
+
+      .menu-items hr{
+        opacity: 20%;
+        margin: 1rem 0;
+      }
+      .navbar .logout{
+        color: #fff !important;
+      }
+      .navbar .logout:hover{
+        color: #f44336 !important;
+      }
+    
+      .logo {
+        order: 2;
+        position: absolute;
+        top: 2px;
+        right: 15px;
+        width: 15rem;
+        margin: 0;
+      }
+      .logout{
+        margin: 0 !important;
+      }
+      .menu-items hr{
+        display: block;
+        width: 100%;
+        
+      }
+
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line{
+        background: #444;
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(35deg);
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-35deg);
+      }
+
+      /*********************** Collection *********************/
+
+    .explore{
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -90%);
+    }
+    .collection .wrapper-line1, .wrapper-line2{
+        display: block;
+    }
+    .collection .wrapper{
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+    .collection .main-wrapper{
+        width: 80%;
+    }
+    .collection .wrapper img{
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .collection h1{
+        font-size: 1.7rem;
+        margin-top: 2rem;
+    }
+
+    /******************************** Footer ****************************/
+
+    .footer-main-container{
+        display: block;
+        width: 100%;
+        padding-top: 0.8rem;
+    }
+    .footer-sub-container{
+        width: 100%;
+    }
+    footer .footer-wrapper{
+        margin-bottom: 1.8rem;
+    }
+    footer h2{
+        margin-top: 2rem;
+    }
+    footer .sub-wrapper{
+        width: 85%;
+    }
+    footer .wrap-subwrapper{
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /*********************** Slide  ****************/
+    .explore{
+     
+      padding: 0.8rem 1.8rem;
+      font-size: 1.9rem;
+      
+  }
+
+  .split-slider__placeholder p{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70%;
+      font-size: 1.2rem;
+      text-align: center;
+  }
+
+    /******* Login and Register page *******/
+    #login-register-section .login-wrapper {
+        width: 95%;
+    
+    }
+    #login-register-section .login-wrapper .login-btn{
+        width: 50%;
+    }
+    #login-register-section .login-btn-container{
+        text-align: center;
+    }
+
+    /***********Home page *******************/
+
+    #home-section .home-wrapper{
+        width: 95%;
+        text-align: center;
+    }
+    .home-div1{
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+    .home-div2{
+        display: block;
+        margin-top: 1.5rem;
+    }
+    #home-section .home-wrapper p{
+        display: none;
+    }
+    #home-section .home-wrapper hr{
+        display: inline-block;
+        opacity: 50%;
+        margin: 3px 0px 3px 0px;
+        width: 30%;
+        
+    }
+    #home-section .home-wrapper .home-btn{
+        padding: 1.5rem 4rem;
+    }
+
+    .reg-rev-form{
+        text-align: left;
+    }
+
+    /******** Contact List ********************/
+
+    .contact-list-wrapper{
+      width: 95%;
+    }
+
+    /************* regulargst and reversegst ******************/
+
+    #reg-revgst-wrapper .left-right-wrapper-reg-revgst{
+        display: inline-block;
+    }
+    #reg-revgst-wrapper .reg-revgst-left{
+        width: 100%;
+    }
+    
+    #reg-revgst-wrapper .reg-revgst-right{
+        width: 100%;
+    }
+    #reg-revgst-wrapper button{
+        width: 60%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    #reg-revgst-wrapper{
+        width: 95%;
+    }
+
+    /********** regular and reverse page **************/
+
+    #reg-rev-section .reg-rev-form{
+        text-align: left;
+    }
+    
+    #reg-rev-section .regular-wrapper{
+        width: 95%;
+    }
+
+    #reg-rev-section button{
+        width: 50%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    #reg-rev-section .login-btn-container{
+        text-align: center;
+    }
+    /******************** History ***********************/
+    .history-main-wrapper{
+        width: 95%;
+    }
+    .history-left-right-wrapper{
+        display: block;
+    }
+    .history-right, .history-left{
+        width: 100%;
+    }
+    .history-right-div1{
+        width: 25%;
+    }
+    
+    .history-right-div2{
+        width: 75%;
+    }
+    .history-left-div1{
+        width: 25%;
+    }
+    
+    .history-left-div2{
+        width: 75%;
+    }
+    .history-wrapper{
+        padding: 1rem;
+    }
+    .remove-margin-top{
+        margin-top: 0;
+    }
+    /* popup */
+    .modal-content{
+        width: 95%;
+    }
+
+    /******************* contact ****************************/
+
+    .contact-sub-div{
+      display: block;
+    }
+    .contact-div{
+        width: 95%;
+    }
+    .contact-subdiv-left{
+        width: 100%;
+    }
+    .contact-subdiv-right{
+        width: 100%;
+    }
+
+     /***************** about ***************/
+     .about-wrapper{
+        width: 95%;
+    }
+
+    /************************* Queries Page *********************/
+
+    .queries-wrapper{
+      width: 95%;
+  }
+
+}
+
+
+
+@media (min-width: 501px) and (max-width: 768px){
+  html{
+    font-size: 14px;
+  }
+
+
+    /*********************** Navbar *********************/
+
+    .navbar-bg{
+      height: 10rem;
+  }
+    .navbar {
+        opacity: 0.95;
+    }
+
+   
+      .navbar-container input[type="checkbox"],
+      .navbar-container .hamburger-lines {
+        display: block;
+      }
+    
+      .navbar-container {
+        display: block;
+        position: relative;
+        height: 64px;
+      }
+    .navbar-container::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+    
+    .navbar-container input[type="checkbox"] {
+      position: absolute;
+      display: block;
+      height: 32px;
+      width: 30px;
+      top: 20px;
+      left: 20px;
+      z-index: 202;
+      opacity: 0;
+    }
+  
+    .navbar-container .hamburger-lines {
+      
+      display: block;
+      height: 23px;
+      width: 35px;
+      position: absolute;
+      top: 17px;
+      left: 20px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 201;
+    }
+    
+      .navbar-container .hamburger-lines .line {
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: rgb(232, 232, 232);
+      }
+    
+      .navbar-container .hamburger-lines .line1 {
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+      }
+    
+      .navbar-container .hamburger-lines .line2 {
+        transition: transform 0.2s ease-in-out;
+      }
+    
+      .navbar-container .hamburger-lines .line3 {
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+      }
+    
+      .navbar .menu-items {
+        z-index: 5;
+        position: relative;
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 0px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+        align-items: center;
+        overflow: scroll;
+        overflow-x: hidden;
+      }
+      .navbar .menu-items li{
+        margin-top: 0.5rem;
+      }
+    
+      .navbar .menu-items li{
+        margin-bottom: 1rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+        margin-left: 0;
+      }
+      .navbar .menu-items a{
+        color: #444;
+      }
+
+      .menu-items hr{
+        opacity: 20%;
+        margin: 1rem 0;
+      }
+      .navbar .logout{
+        color: #fff !important;
+      }
+      .navbar .logout:hover{
+        color: #f44336 !important;
+      }
+    
+      .logo {
+        order: 2;
+        position: absolute;
+        top: 2px;
+        right: 15px;
+        width: 10rem;
+        margin: 0;
+      }
+      .logout{
+        margin: 0 !important;
+      }
+      .menu-items hr{
+        display: block;
+        width: 80%;
+        
+      }
+
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line{
+        background: #444;
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+        transform: translateX(0);
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+        transform: rotate(35deg);
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+        transform: scaleY(0);
+      }
+    
+      .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+        transform: rotate(-35deg);
+      }
+
+          /******************************** Footer ****************************/
+
+    .footer-main-container{
+        display: block;
+        width: 100%;
+        padding-top: 0.8rem;
+    }
+    .footer-sub-container{
+        width: 100%;
+    }
+    footer .footer-wrapper{
+        margin-bottom: 1.8rem;
+    }
+    footer h2{
+        margin-top: 2rem;
+    }
+    footer .sub-wrapper{
+        width: 80%;
+    }
+    footer .wrap-subwrapper{
+        display: flex;
+        justify-content: space-around;
+    }
+  /********************** collection *********************/
+
+  .explore{
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -90%);
+}
+.collection .wrapper-line1, .wrapper-line2{
+    display: block;
+}
+.collection .wrapper{
+    width: 100%;
+    margin: 0 0 1rem 0;
+}
+.collection .main-wrapper{
+    width: 60%;
+}
+.collection .wrapper img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+.collection h1{
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+    /******* Login page *******/
+    #login-register-section .login-wrapper {
+        width: 95%;
+    
+    }
+    #login-register-section .login-wrapper .login-btn{
+        width: 50%;
+    }
+    #login-register-section .login-btn-container{
+        text-align: center;
+    }
+
+    /******** Home page ********/
+    #home-section .home-wrapper{
+        width: 95%;
+        text-align: center;
+    }
+
+    /******** Contact List ********************/
+
+    .contact-list-wrapper{
+      width: 90%;
+    }
+
+    /********** regular and reverse page **************/
+    #reg-rev-section .reg-rev-form{
+        text-align: left;
+    }
+    
+    #reg-rev-section .regular-wrapper{
+        width: 95%;
+    }
+
+    #reg-rev-section button{
+        width: 50%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    #reg-rev-section .login-btn-container{
+        text-align: center;
+    }
+
+
+     /************* regulargst and reversegst ******************/
+
+     #reg-revgst-wrapper .left-right-wrapper-reg-revgst{
+        display: inline-block;
+    }
+    #reg-revgst-wrapper .reg-revgst-left{
+        width: 100%;
+    }
+    
+    #reg-revgst-wrapper .reg-revgst-right{
+        width: 100%;
+    }
+    #reg-revgst-wrapper button{
+        width: 50%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    #reg-revgst-wrapper{
+        width: 90%;
+    }
+    /******************** History ***********************/
+    .history-main-wrapper{
+        width: 95%;
+    }
+     /* popup */
+    .modal-content{
+        width: 80%;
+    }
+    /******************* contact ****************************/
+
+    .navbar-bg{
+        height: 8rem;
+    }
+    .contact-sub-div{
+      display: block;
+    }
+    .contact-div{
+        width: 80%;
+    }
+    .contact-subdiv-left{
+        width: 100%;
+    }
+    .contact-subdiv-right{
+        width: 100%;
+    }
+
+      /************************* Queries Page *********************/
+
+      .queries-wrapper{
+        width: 95%;
+    }
+   
+    
+
+}
+
+@media (min-width: 601px) and (max-width: 1240px){
+
+        /*********************** Navbar *********************/
+
+        .navbar {
+            opacity: 0.95;
+            height: 5rem;
+        }
+       
+          .navbar-container input[type="checkbox"],
+          .navbar-container .hamburger-lines {
+            display: block;
+          }
+        
+          .navbar-container {
+            display: block;
+            position: relative;
+            height: 5rem;
+            
+            
+          }
+        .navbar-container::after {
+            content: "";
+    
+            clear: both;
+            display: table;
+        }
+        
+          .navbar-container input[type="checkbox"] {
+            position: absolute;
+            display: block;
+            height: 32px;
+            width: 30px;
+            top: 20px;
+            left: 20px;
+            z-index: 202;
+            opacity: 0;
+          }
+        
+          .navbar-container .hamburger-lines {
+            
+            display: block;
+            height: 23px;
+            width: 35px;
+            position: absolute;
+            top: 17px;
+            left: 20px;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            z-index: 201;
+          }
+        
+          .navbar-container .hamburger-lines .line {
+            display: block;
+            height: 4px;
+            width: 100%;
+            border-radius: 10px;
+            background: rgb(232, 232, 232);
+          }
+        
+          .navbar-container .hamburger-lines .line1 {
+            transform-origin: 0% 0%;
+            transition: transform 0.4s ease-in-out;
+          }
+        
+          .navbar-container .hamburger-lines .line2 {
+            transition: transform 0.2s ease-in-out;
+          }
+        
+          .navbar-container .hamburger-lines .line3 {
+            transform-origin: 0% 100%;
+            transition: transform 0.4s ease-in-out;
+          }
+        
+          .navbar .menu-items {
+            z-index: 200;
+            position: relative;
+            top: 0;
+            padding-top: 100px;
+            background: #fff;
+            min-height: 100vh;
+            max-width: 300px;
+            transform: translate(-150%);
+            display: flex;
+            flex-direction: column;
+            margin: 0 0 1rem -40px;
+            padding-left: 0px;
+            padding-right: 0;
+            transition: transform 0.5s ease-in-out;
+            box-shadow: 5px 0px 10px 0px #aaa;
+            align-items: center;
+            overflow: scroll;
+            overflow-x: hidden;
+          }
+          .navbar .menu-items li{
+            margin-top: 0.5rem;
+          }
+        
+          .navbar .menu-items li{
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-left: 0;
+          }
+          .navbar .menu-items a{
+            color: #444;
+          }
+          .menu-items hr{
+            opacity: 20%;
+            margin: 1rem 0;
+          }
+          .navbar .logout{
+            color: #fff !important;
+          }
+          .navbar .logout:hover{
+            color: #f44336 !important;
+          }
+        
+          .logo {
+            order: 2;
+            position: absolute;
+            top: 2px;
+            right: 15px;
+            width: 15rem;
+            margin: 0;
+          }
+          .logout{
+            margin: 0 !important;
+          }
+          .menu-items hr{
+            display: block;
+            width: 80%;
+            
+          }
+    
+          .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line{
+            background: #444;
+          }
+        
+          .navbar-container input[type="checkbox"]:checked ~ .menu-items {
+            transform: translateX(0);
+          }
+        
+          .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
+            transform: rotate(35deg);
+          }
+        
+          .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
+            transform: scaleY(0);
+          }
+        
+          .navbar-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
+            transform: rotate(-35deg);
+          }
+    .explore{
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -90%);
+    }
+
+    .split-slider__placeholder p{
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 1.2rem;
+      text-align: center;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px){
+
+    /**************************** footer ************************/
+    footer .footer-main-container{
+        width: 100%;
+    }
+    
+    #login-register-section .login-wrapper {
+        width: 70%;
+    
+    }
+    #login-register-section .login-wrapper .login-btn{
+        width: 50%;
+    }
+    #login-register-section .login-btn-container{
+        text-align: center;
+    }
+
+    /******** Home page ********/
+    #home-section .home-wrapper{
+        width: 70%;
+        text-align: center;
+    }
+
+    /******** Contact List ********************/
+
+    .contact-list-wrapper{
+      width: 50%;
+      
+    }
+
+    /************* regular and reverse page *****************/
+    .reg-rev-form{
+        text-align: left;
+    }
+    
+    #reg-rev-section .regular-wrapper{
+        width: 70%;
+    }
+
+    #reg-rev-section button{
+        width: 50%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    #reg-rev-section .login-btn-container{
+        text-align: center;
+    }
+
+
+
+
+    /*********** regulargst and reversegst ****************/
+     #reg-revgst-wrapper button{
+        width: 50%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    /******************** History ***********************/
+    .history-main-wrapper{
+        width: 70%;
+    }
+
+       /************************* Queries Page *********************/
+
+       .queries-wrapper{
+        width: 80%;
+    }
+    
+}
+
+@media (min-width: 1025px) and (max-width: 1200px){
+    /* html{
+        font-size: 15px;
+    } */
+    #login-register-section .login-wrapper {
+        width: 40%;
+    
+    }
+    #login-register-section .login-wrapper .login-btn{
+        width: 70%;
+    }
+    #login-register-section .login-btn-container{
+        text-align: center;
+    }
+
+    /******** Home page ********/
+    #home-section .home-wrapper{
+        width: 55%;
+        text-align: center;
+    }
+    /************* regular and reverse page **********************/
+
+    #reg-rev-section .reg-rev-form{
+        text-align: left;
+    }
+    
+    #reg-rev-section .regular-wrapper{
+        width: 45%;
+    }
+
+    /************ regulargst and reversegst *************/
+
+    #reg-revgst-wrapper button{
+        width: 30%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (min-width: 1201px){
+
+    .reg-rev-form{
+        text-align: left;
+    }
+
+    .regular-wrapper{
+        width: 30%;
+        text-align: center;
+    }
+
+    /******* regular ad reverse page*******/
+
+    #reg-rev-section .regular-wrapper{
+        width: 30%;
+    }
+
+    /************ regulargst and reversegst *************/
+
+    #reg-revgst-wrapper button{
+        width: 25%;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+}

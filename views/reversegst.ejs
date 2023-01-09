@@ -1,0 +1,94 @@
+<section id="reg-rev-gst-section" class="home-section login-section regular-section regulargst-section">
+
+    <div class="reversegst-main-wrapper">
+        <div class="navbar-bg">
+            
+        </div>
+
+        <div class="home-wrapper login-wrapper regular-wrapper" id="reg-revgst-wrapper">
+
+            <h1 class="invoice">Invoice</h1>
+            <hr>
+    
+            <form class="reg-rev-form" action="/reversegst" method="POST">
+    
+                <div class="left-right-wrapper-reg-revgst">
+    
+                    <div class="reg-revgst-left">
+    
+                        <label for="">Item Description</label> <br>
+        
+                        <input name="itemDescription" type="text" placeholder="Item Description" value="<%= messages.description %>"> </br>
+    
+                        <label for="">Making Charges(%)</label> </br>
+        
+                        <input step="any" name="makingChargesPercentage" type="number" placeholder="Making Charges" value="<%= messages.netWeight %>" required> </br>
+    
+                        <label for="">Amount(GST Inclusive)</label> </br>
+        
+                        <input step="any" name="amount" type="number" placeholder="Amount" value="<%= messages.amount %>" required> </br>
+        
+        
+                        <label for="">CGST(%)</label> </br>
+        
+                        <input name="cgst" step="any" type="number" placeholder="CGST"> </br>
+
+                        <label for="">HSN Code</label> </br>
+        
+                        <input name="hsn" step="any" type="number" placeholder="HSN" value="7113">
+    
+                        
+        
+                    </div>
+        
+                    <div class="reg-revgst-right">
+        
+                        <label for="">Gross Weight(%)</label> </br>
+        
+                        <input step="any" name="grossWeightPercentage" type="number" placeholder="Gross Weight Percentage" value="<%= messages.grossWeight %>" required> </br>
+    
+                        <label for="">LBR rate</label> </br>
+        
+                        <input step="any" name="lbr" type="number" placeholder="Price(LBR rate)" value="<%= messages.lbr %>"> </br>
+        
+                        <label for="">SGST(%)</label> </br>
+        
+                        <input step="any" name="sgst" type="number" placeholder="SGST"> </br>
+    
+                        <label for="">IGST(%)</label> </br>
+        
+                        <input name="igst" step="any" type="number" placeholder="IGST"> </br>
+
+                        <label for="">Date</label> </br>
+        
+                        <input id="currentDate" name="date" step="any" type="date" placeholder="CGST"> </br>
+        
+                     
+        
+        
+                    </div>
+    
+                </div>
+    
+                <div class="reg-rev-error-div">
+                    <% if(messages.reversegst_error) {%> 
+                        <span><%= messages.reversegst_error %> </span>
+                    <% } %> 
+                </div>
+                
+                <div class="login-btn-container">
+    
+                <button class=" regular login-btn" type="submit">Generate Invoice</button>
+    
+    
+                </div>
+            
+    
+            </form>
+    
+        </div>
+    </div>
+
+    
+
+</section>

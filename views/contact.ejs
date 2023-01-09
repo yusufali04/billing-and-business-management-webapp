@@ -1,0 +1,78 @@
+<section>
+    <div class="contact-main-wrapper">
+        <div class="navbar-bg">
+            
+        </div>
+        <div class="contact-div">
+            <% if(messages.sent_success){ %> 
+            <div class="contact-message-div">
+                <p><%= messages.sent_success %> </p>
+            </div>
+            <% } %> 
+            <div class="contact-sub-div">
+
+                <div class="contact-subdiv-left">
+                    <div class="contact-wrapper">
+                        <div class="sub-wrapper">
+                            <i class="fa-solid fa-location-dot fa-2x location-icon"></i>
+                            <div>
+                            <h3>Find Us</h3>
+                            <p>#7/80C5-14, Nandyal, AP - 518502</p>
+                            </div>
+                        </div>
+                        
+                        
+                    </div>
+                    <div class="contact-wrapper">
+                        <div class="sub-wrapper">
+                            <i class="fa-solid fa-phone-flip fa-2x"></i>
+                            <div>
+                            <h3>Call Us</h3>
+                            <p><a class="border-bottom hover-blue phone" href="tel: +91 9000003448">+91 9000003448</a><i class="fa-solid fa-arrow-up-right-from-square external-link"></i></p>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <div class="contact-wrapper ">
+                        <div class="sub-wrapper">
+                            <i class="fa-solid fa-envelope fa-2x"></i>
+                            <div>
+                            <h3>Mail Us</h3>
+                            <p><a class="border-bottom email hover-blue" href="mailto: aimfor54321@gmail.com">info@mirzajewels.com</a><i class="fa-solid fa-arrow-up-right-from-square external-link"></i></p>
+                            </div>
+                        </div>
+                        
+                    </div>
+    
+                    <img src="/img/jewels logo.png" alt="">
+        
+                </div>
+        
+                
+                    
+                
+                <div class="contact-subdiv-right">
+                    <h2>Contact Us</h2>
+                    <hr>
+                    <p>You can contact us by filling out the below form.We will definitely reach out to you as soon as possible.</p>
+                    <form action="/query" method="post">
+                        <label for="name">Name</label>
+                        <input name="name" id="name" type="text" required>
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" required>
+                        <label for="phone">Phone</label>
+                        <input type="tel" name="phone" id="phone" required>
+                        <label class="not-required" for="message">Message(optional)</label>
+                        <textarea style="resize: none;" name="message" id="message" cols="30" rows="10"></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+            
+    
+        </div>
+
+        
+    </div>
+</section>

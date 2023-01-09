@@ -1,0 +1,47 @@
+
+<section id="login-register-section" class="home-section login-section">
+
+    <div class="login-register-main-wrapper">
+        <div class="navbar-bg">
+            
+        </div>
+
+        <div class="home-wrapper login-wrapper">
+
+            <div>
+                <h1 class="invoice">Login</h1>
+                <hr>
+            </div>
+           
+    
+            <form class="reg-rev-form" action="/login" method="POST">
+    
+                <label for="">Email</label> </br>
+    
+                <input name="email" type="email" placeholder="Email" value="<%= messages.email %> "> </br>
+    
+                <label for="">Password</label> </br>
+    
+                <input name="password" type="password" placeholder="Password"> </br>
+    
+                <% if(messages.error){ %>
+    
+                <span class="login-error-span"><%= messages.error %> </span>
+    
+                <% } %> 
+                <div class="login-btn-container">
+    
+                <button class="login-btn" type="submit">Sign In</button>
+    
+    
+                </div>
+            
+    
+            </form>
+    
+        </div>
+    </div>
+
+    
+
+</section>

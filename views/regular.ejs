@@ -1,0 +1,49 @@
+<section id="reg-rev-section" class="home-section login-section regular-section">
+
+    <div class="regular-main-wrapper">
+        <div class="navbar-bg">
+            
+        </div>
+
+        <div class="home-wrapper login-wrapper regular-wrapper">
+
+            <h1>Customer Details</h1>
+            <hr>
+    
+            <form class="reg-rev-form" action="/regular" method="POST">
+    
+                <label for="">Name</label> </br>
+    
+                <input name="customer_name" type="text" placeholder="Customer Name"> </br>
+    
+                <label for="">Address</label> </br>
+    
+                <input name="customer_address" type="text" placeholder="Address"> </br>
+    
+                <label for="">GSTIN</label> </br>
+    
+                <input name="customer_gstin" type="text" placeholder="GSTIN"> </br>
+                
+                <div class="reg-rev-error-div">
+                    <% if(messages.regular_error) {%> 
+                        <span><%= messages.regular_error %> </span>
+                    <% } %> 
+                </div>
+    
+                <div class="login-btn-container">
+    
+                <button class="login-btn" type="submit">Next</button>
+    
+    
+                </div>
+            
+    
+            </form>
+    
+        </div>
+
+    </div>
+
+    
+
+</section>
