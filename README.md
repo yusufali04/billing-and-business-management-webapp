@@ -29,7 +29,7 @@ Visit: https://mirzajewels.com/
 Go to the project directory
 
 ```bash
-  cd ecommerce-app
+  cd billing-and-business-management-webapp
 ```
 
 Install dependencies
