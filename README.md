@@ -24,7 +24,25 @@ Visit: https://mirzajewels.com/
 - Receiving Queries from customers 
 - Highly Responsive Design
 
+## Run Locally
 
+Go to the project directory
+
+```bash
+  cd ecommerce-app
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  node server.js
+```
 
 
 
